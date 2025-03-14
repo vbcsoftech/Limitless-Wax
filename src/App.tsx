@@ -5,6 +5,7 @@ import theme from './theme';
 import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
 import AboutUs from './pages/AboutUs';
+import Account from './pages/Account';
 import Footer from './components/Footer';
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       <Box sx={{ backgroundImage: "url('images/Rectangle.png')",backgroundSize:"100%", color: 'text.primary', minHeight: '100vh' }}>
         <Container maxWidth="lg">
           <Header />
-          <AboutUs />
+          <Account />
         </Container>
         <Footer />
       </Box>
