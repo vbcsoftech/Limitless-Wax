@@ -51,7 +51,7 @@ const FAQSection = () => {
           expanded={expanded === `panel${item.id}`} 
           onChange={handleChange(`panel${item.id}`)}
           sx={(theme) => ({
-            bgcolor: theme.palette.background.paper,
+            bgcolor: "#331E22CC",
             borderRadius: '20px',
             '& .MuiAccordionSummary-root': {
               borderRadius: expanded === `panel${item.id}` ? '20px 20px 0 0' : '20px',

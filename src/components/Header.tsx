@@ -5,11 +5,18 @@ import MenuIcon from '@mui/icons-material/Menu';
 const navigationItems = [
   { label: 'About Us', path: '/about' },
   { label: 'Account', path: '/account' },
-  { label: 'Spudnik', path: '/spudnik' },
+  { label: 'Cpu4sale', path: '/cpusale' },
   { label: 'Limitlesswax', path: '/limitlesswax' }
 ] as const;
 
-const Header = () => {
+/**
+ * Component description
+ * @param {string} prop1 - Description of prop1
+ * @param {string} prop2 - Description of prop2
+ * @param {function} onAction - Description of onAction
+ * @returns {JSX.Element}
+ */
+const Header: React.FC = () => {
   const isMobile = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -18,7 +25,17 @@ const Header = () => {
   };
 
   return (
-    <Box position="static" sx={{bgcolor: "none", boxShadow: 'none', py: 2 }}>
+    <Box position="static" sx={{
+      position: 'relative',
+      top: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 2,
+      p: { xs: 2, sm: 3, md: 4 },
+      bgcolor: 'background.paper',
+      borderRadius: 1,
+      fontSize: { xs: '0.875rem', sm: '1rem' },
+    }}>
       <Toolbar style={{justifyContent:"space-between"}} >
         <img 
           src="images/Limitless 1.png" 
@@ -78,6 +95,10 @@ const Header = () => {
                       borderColor: theme.palette.text.secondary,
                     }
                   })}
+                  onClick={() => {
+                    handleNavigation("/login");
+                    setMobileMenuOpen(false);
+                  }}
                 >
                   Login
                 </Button>
@@ -109,6 +130,9 @@ const Header = () => {
                   borderColor: theme.palette.text.secondary,
                 }
               })}
+              onClick={() => {
+                handleNavigation("/login");
+              }}
             >
               Login
             </Button>

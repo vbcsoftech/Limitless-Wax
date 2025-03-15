@@ -31,7 +31,24 @@ const Dashboard: React.FC<DashboardProps> = ({ className, sx }) => {
   };
 
   return (
-    <>
+    <Box 
+      sx={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        pb: { xs: 8, sm: 10, md: 12 },
+        position: 'relative',
+        '&::before': {
+          content: '""',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: -1,
+        }
+      }}
+    >
       <Box textAlign="center" sx={{ py: 4, ...sx }}>
         <Box>
           <Typography variant={isSmallScreen ? "h5" : "h3"} sx={{color: "white"}} gutterBottom>
@@ -122,8 +139,8 @@ const Dashboard: React.FC<DashboardProps> = ({ className, sx }) => {
           <Box sx={{ 
             flex: {
               xs: '1 1 100%',
-              sm: '1 1 calc(50% - 16px)',
-              md: '1 1 calc(30% - 16px)'
+              sm: '1 1 calc(100% - 16px)',
+              md: '1 1 calc(50% - 16px)',
             },
             display: 'flex',
             flexDirection: "column",
@@ -149,7 +166,7 @@ const Dashboard: React.FC<DashboardProps> = ({ className, sx }) => {
             flex: {
               xs: '1 1 100%',
               sm: '1 1 calc(50% - 16px)',
-              md: '1 1 calc(30% - 16px)'
+              md: '1 1 calc(25% - 16px)'
             },
             display: 'flex',
             flexDirection: "column",
@@ -174,7 +191,7 @@ const Dashboard: React.FC<DashboardProps> = ({ className, sx }) => {
             flex: {
               xs: '1 1 100%',
               sm: '1 1 calc(50% - 16px)',
-              md: '1 1 calc(30% - 16px)'
+              md: '1 1 calc(25% - 16px)'
             },
             display: 'flex',
             flexDirection: "column",
@@ -198,12 +215,12 @@ const Dashboard: React.FC<DashboardProps> = ({ className, sx }) => {
             flex: {
               xs: '1 1 100%',
               sm: '1 1 calc(50% - 16px)',
-              md: '1 1 calc(30% - 16px)'
+              md: '1 1 calc(25% - 16px)'
             },
             display: 'flex',
             flexDirection: "column",
             justifyContent: "center",
-            bgcolor: "#331E22",
+            bgcolor: "#4A1E2A",
             minHeight: 250,
             border: "1px solid",
             borderColor: "inherit",
@@ -224,12 +241,12 @@ const Dashboard: React.FC<DashboardProps> = ({ className, sx }) => {
             flex: {
               xs: '1 1 100%',
               sm: '1 1 calc(50% - 16px)',
-              md: '1 1 calc(30% - 16px)'
+              md: '1 1 calc(25% - 16px)'
             },
             display: 'flex',
             flexDirection: "column",
             justifyContent: "center",
-            bgcolor: "#331E22",
+            bgcolor: "#4A1E2A",
             minHeight: 250,
             border: "1px solid",
             borderColor: "inherit",
@@ -250,13 +267,13 @@ const Dashboard: React.FC<DashboardProps> = ({ className, sx }) => {
           <Box sx={{ 
             flex: {
               xs: '1 1 100%',
-              sm: '1 1 calc(50% - 16px)',
-              md: '1 1 calc(30% - 16px)'
+              sm: '1 1 calc(100% - 16px)',
+              md: '1 1 calc(50% - 16px)',
             },
             display: 'flex',
             flexDirection: "column",
             justifyContent: "center",
-            bgcolor: "#331E22",
+            bgcolor: "#4A1E2A",
             minHeight: 250,
             border: "1px solid",
             borderColor: "inherit",
@@ -277,7 +294,7 @@ const Dashboard: React.FC<DashboardProps> = ({ className, sx }) => {
       </Box>
       <CallToAction />
       <FAQSection />
-    </>
+    </Box>
   );
 };
 

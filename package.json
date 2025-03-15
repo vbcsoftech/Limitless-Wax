@@ -23,7 +23,8 @@
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.15",
-    "web-vitals": "^2.1.0"
+    "web-vitals": "^2.1.0",
+    "yarn": "^1.22.22"
   },
   "scripts": {
     "start": "react-scripts start",
