@@ -13,7 +13,7 @@ const HeroSection = () => (
       boxShadow: (theme) => theme.shadows[4]
     }}
   >
-    <Typography variant="h4" gutterBottom sx={{color: "white"}}>
+    <Typography variant="h4" gutterBottom>
       Allowing anyone to rent cpu or deposit wax and earn from renting to others.
     </Typography>
     <Typography variant="subtitle1" paragraph>

@@ -1,124 +1,98 @@
+// src/components/Dashboard.tsx
 import React from 'react';
-import { Typography, Card, Button, Box, useMediaQuery, useTheme } from '@mui/material';
-import { styled } from '@mui/system';
+import { Box, Typography, Link } from '@mui/material';
+import AccounDashboard from '../components/AccountDashboard';
 
-const DashboardContainer = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  padding: theme.spacing(4),
-  backgroundColor: theme.palette.background.default,
-}));
-
-const BalanceContainer = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  justifyContent: 'space-around',
-  width: '100%',
-  marginBottom: theme.spacing(4),
-  flexWrap: 'wrap', // Allow items to wrap on smaller screens
-}));
-
-const BalanceCard = styled(Card)(({ theme }) => ({
-  padding: theme.spacing(2),
-  minWidth: '200px',
-  marginBottom: theme.spacing(2),
-}));
-
-const ButtonContainer = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  justifyContent: 'center',
-  gap: theme.spacing(2),
-  width: '100%',
-  marginBottom: theme.spacing(4),
-  flexWrap: 'wrap', // Allow buttons to wrap on smaller screens
-}));
-
-const InfoCardContainer = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  justifyContent: 'space-around',
-  width: '100%',
-  flexWrap: 'wrap',
-  gap: theme.spacing(2),
-  marginBottom: theme.spacing(4),
-}));
-
-const InfoCard = styled(Card)(({ theme }) => ({
-  padding: theme.spacing(2),
-  textAlign: 'center',
-  minWidth: '200px',
-  backgroundColor: theme.palette.primary.main,
-  color: theme.palette.secondary.main,
-}));
-
-const Account = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
+const Account: React.FC = () => {
   return (
-    <DashboardContainer>
-      <Typography variant="h4" color="primary" gutterBottom>
-        Dashboard
-      </Typography>
+    <Box
+      sx={{
+        minHeight: '100vh',
+        backgroundColor: 'background.default',
+        color: 'text.primary',
+        padding: 4,
+      }}
+    >
+      {/* Header Section */}
+      <Box sx={{ 
+        display: 'flex', 
+        flexDirection: { xs: 'column', md: 'row' },
+        gap: { xs: 3, md: 2 }, 
+        justifyContent: 'space-between', 
+        alignItems: { xs: 'stretch', md: 'center' }, 
+        mb: 3 
+      }}>
+        <Box 
+          width={{ xs: '100%', md: '60%' }} 
+          display="flex" 
+          gap={{ xs: 2, md: 4 }} 
+          alignItems="center"
+        >
+          <Box 
+            boxShadow="10px 10px 8px #00000026" 
+            width={{ xs: '80px', sm: '100px', md: '120px' }} 
+            height={{ xs: '80px', sm: '100px', md: '120px' }} 
+            bgcolor="#8C243F" 
+            borderRadius="50%" 
+          />
+          <Typography 
+            sx={{
+              color: "white",
+              fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' }
+            }} 
+            variant="h4"
+          >
+            ki.fg.wam
+          </Typography>
+        </Box>
+        <Box sx={{ 
+          display: 'flex', 
+          flexDirection: { xs: 'column', sm: 'row' },
+          gap: { xs: 2, sm: 4 },
+          width: { xs: '100%', md: 'auto' }
+        }}>
+          <Box 
+            bgcolor="#391E24" 
+            borderRadius="25px" 
+            px={{ xs: 1.5, sm: 2 }} 
+            py={1} 
+            boxShadow="5px 5px 5px #00000026"
+            sx={{
+              width: { xs: '100%', sm: 'auto' }
+            }}
+          >
+            <Typography variant="h6" fontSize={{ xs: '1rem', sm: '1.25rem' }}>Total WAX</Typography>
+            <Typography variant="h6" fontSize={{ xs: '1rem', sm: '1.25rem' }}> Balance:</Typography>
+            <Typography variant="h6" fontSize={{ xs: '1rem', sm: '1.25rem' }}>6.12345672</Typography>
+          </Box>
+          <Box 
+            bgcolor="#391E24" 
+            borderRadius="25px" 
+            px={{ xs: 1.5, sm: 2 }} 
+            py={1} 
+            boxShadow="5px 5px 5px #00000026"
+            sx={{
+              width: { xs: '100%', sm: 'auto' }
+            }}
+          >
+            <Typography variant="h6" fontSize={{ xs: '1rem', sm: '1.25rem' }}>Total USD</Typography>
+            <Typography variant="h6" fontSize={{ xs: '1rem', sm: '1.25rem' }}> Balance:</Typography>
+            <Typography variant="h6" fontSize={{ xs: '1rem', sm: '1.25rem' }}>$1.9321245</Typography>
+          </Box>
+        </Box>
+      </Box>
 
-      {/* Balance Section */}
-      <BalanceContainer>
-        <BalanceCard>
-          <Typography variant="h6">Total WAX Balance</Typography>
-          <Typography variant="h4">6.12354672</Typography>
-        </BalanceCard>
-        <BalanceCard>
-          <Typography variant="h6">Total USD Balance</Typography>
-          <Typography variant="h4">$1.9321245</Typography>
-        </BalanceCard>
-      </BalanceContainer>
+      {/* Dashboard Title */}
+      <Box py={3} display="flex" justifyContent="space-between" alignItems="center">
+        <Typography variant="h4" sx={{ fontWeight: "bold", color: "white" }}>
+          Dashboard
+        </Typography>
+        <Link sx={{color: "#EBEBEB", textDecoration: "none"}}>View on Wax.bloks.io</Link>
+      </Box>
 
-      {/* Button Section */}
-      <ButtonContainer>
-        <Button variant="contained" color="primary">
-          Request Free CPU
-        </Button>
-        <Button variant="outlined" color="secondary">
-          Update Collected Fees
-        </Button>
-      </ButtonContainer>
-
-      {/* Info Cards Section */}
-      <InfoCardContainer>
-        <InfoCard>
-          <Typography variant="h6">Requested CPU for self total:</Typography>
-          <Typography variant="h4">6.12354</Typography>
-        </InfoCard>
-        <InfoCard>
-          <Typography variant="h6">Update Collected Fees</Typography>
-          <Typography variant="h4">6.12354</Typography>
-        </InfoCard>
-        <InfoCard>
-          <Typography variant="h6">Total Free CPU</Typography>
-          <Typography variant="h4">6.12354</Typography>
-          <Typography variant="body2">1 Day Earning 6.12354</Typography>
-          <Typography variant="body2">15 Days Earning 6.12354</Typography>
-          <Typography variant="body2">30 Days Earning 6.12354</Typography>
-        </InfoCard>
-        <InfoCard>
-          <Typography variant="h6">Requested CPU for other total:</Typography>
-          <Typography variant="h4">6.12354</Typography>
-        </InfoCard>
-        <InfoCard>
-          <Typography variant="h6">Deposited WAX to earn:</Typography>
-          <Typography variant="h4">6.12354</Typography>
-        </InfoCard>
-      </InfoCardContainer>
-
-      {/* Navigation Buttons Section */}
-      <ButtonContainer>
-        <Button variant="contained" color="secondary">
-          Go to Cpu4Sale &gt;
-        </Button>
-        <Button variant="contained" color="secondary">
-          Go to LimitlessWAX &gt;
-        </Button>
-      </ButtonContainer>
-    </DashboardContainer>
+      {/* Flexbox Layout for Dashboard Items */}
+      <AccounDashboard />
+    </Box>
   );
 };
 

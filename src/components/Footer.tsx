@@ -1,7 +1,9 @@
 import React from "react";
-import { Box, Container, Grid, Link, Typography } from "@mui/material";
+import { Box, Container, Grid, Link, Typography, useMediaQuery, Theme } from "@mui/material";
 
 const Footer: React.FC = () => {
+  const isMobile = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
+
   return (
     <Box
       component="footer"
@@ -9,6 +11,14 @@ const Footer: React.FC = () => {
         bgcolor: "#331E22",// Dark brown background
         color: "white",
         py: 4,
+        // Hide on mobile
+        display: { xs: 'none', sm: 'block' },
+        // Or with conditional visibility
+        visibility: isMobile ? 'hidden' : 'visible',
+        // Responsive opacity
+        opacity: { xs: 0, sm: 1 },
+        // Smooth transition
+        transition: 'opacity 0.3s ease-in-out'
       }}
     >
       <Container maxWidth="lg">
