@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box, Typography, Button, TextField } from '@mui/material';
 
-const CpuSaleForm_Withdraw: React.FC = () => {
+const CpuSaleFormWithdraw: React.FC = () => {
   return (
-    <Box width={{ xs: '100%', sm: '60%' }}>
+    <Box width={{ xs: '100%', sm: '60%', color: "#EDEDED" }}>
       <Box>
         <Typography variant='h6'>Wax Balance</Typography>
         <Typography variant='subtitle1' sx={{fontWeight: "bold"}}>11.3491 WAX</Typography>
@@ -57,4 +57,4 @@ const CpuSaleForm_Withdraw: React.FC = () => {
   );
 };
 
-export default CpuSaleForm_Withdraw;
+export default CpuSaleFormWithdraw;

@@ -71,7 +71,8 @@ const Partners = () => {
         textAlign="center" 
         mb={{ xs: 3, sm: 4, md: 5 }}
         sx={{
-          fontSize: { xs: '1.125rem', sm: '1.25rem', md: '1.5rem' }
+          fontSize: { xs: '1.125rem', sm: '1.25rem', md: '1.5rem' },
+          color: "white"
         }}
       >
         Partners

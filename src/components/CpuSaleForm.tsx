@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Box, Typography, Button, List, TextField } from '@mui/material';
+import { Box, Button, List } from '@mui/material';
 
-import CpuSaleForm_Rquest from './CpuSaleForm_Rquest';
-import CpuSaleForm_Stake from './CpuSaleForm_Stake';
-import CpuSaleForm_Deposit from './CpuSaleForm_Deposit';
-import CpuSaleForm_Withdraw from './CpuSaleForm_Withdraw'
+import CpuSaleFormRquest from './CpuSaleFormRquest';
+import CpuSaleFormStake from './CpuSaleFormStake';
+import CpuSaleFormDeposit from './CpuSaleFormDeposit';
+import CpuSaleFormWithdraw from './CpuSaleFormWithdraw'
 
 const saleListItems = [
   { label: 'Request CPU for Self' },
@@ -20,19 +20,19 @@ const Cpu: React.FC = () => {
     switch (openForm) {
       case 0:
         return (
-          <CpuSaleForm_Rquest />
+          <CpuSaleFormRquest />
         );
       case 1:
         return (
-          <CpuSaleForm_Stake />
+          <CpuSaleFormStake />
         );
       case 2:
         return (
-          <CpuSaleForm_Deposit />
+          <CpuSaleFormDeposit />
         );
       case 3:
         return (
-          <CpuSaleForm_Withdraw />
+          <CpuSaleFormWithdraw />
         );
         
       default:

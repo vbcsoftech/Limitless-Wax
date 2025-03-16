@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
           {/* Logo and Help Section */}
           <Grid item xs={12} sm={5}>
             <Box width={1/2}>
-              <img src="images/Limitless 1.png" />
+              <img src="images/Limitless 1.png" alt="logo" />
               <Typography variant="body2" sx={{ mt: 1 }}>
                 If you need help or have any questions, please go through our{" "}
                 <Link href="#" color="inherit" underline="hover">
@@ -46,42 +46,42 @@ const Footer: React.FC = () => {
           <Grid item xs={12} sm={7} sx={{mt: 3}}>
             <Grid container spacing={2}>
               <Grid item xs={6} sm={3}>
-                <Link href="#" color="inherit" underline="hover">
+                <Link href="/" color="inherit" underline="hover">
                   Home
                 </Link>
               </Grid>
               <Grid item xs={6} sm={3}>
-                <Link href="#" color="inherit" underline="hover">
+                <Link href="/account" color="inherit" underline="hover">
                   Account
                 </Link>
               </Grid>
               <Grid item xs={6} sm={3}>
-                <Link href="#" color="inherit" underline="hover">
+                <Link href="/cpusale" color="inherit" underline="hover">
                   Cpu4sale
                 </Link>
               </Grid>
               <Grid item xs={6} sm={3}>
-                <Link href="#" color="inherit" underline="hover">
+                <Link href="limitlesswax" color="inherit" underline="hover">
                   LimitlessWAX
                 </Link>
               </Grid>
               <Grid item xs={6} sm={3}>
-                <Link href="#" color="inherit" underline="hover">
+                <Link href="https://github.com/" color="inherit" underline="hover">
                   GitHub
                 </Link>
               </Grid>
               <Grid item xs={6} sm={3}>
-                <Link href="#" color="inherit" underline="hover">
+                <Link href="https://discord.com/" color="inherit" underline="hover">
                   Discord
                 </Link>
               </Grid>
               <Grid item xs={6} sm={3}>
-                <Link href="#" color="inherit" underline="hover">
+                <Link href="https://www.privacy.com" color="inherit" underline="hover">
                   Privacy
                 </Link>
               </Grid>
               <Grid item xs={6} sm={3}>
-                <Link href="#" color="inherit" underline="hover">
+                <Link href="https://www.term.com/" color="inherit" underline="hover">
                   Terms
                 </Link>
               </Grid>

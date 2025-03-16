@@ -1,13 +1,14 @@
 import React from 'react';
 import { Box, Typography, Button, TextField } from '@mui/material';
 
-const CpuSaleForm_Deposit: React.FC = () => {
+const CpuSaleFormDeposit: React.FC = () => {
   return (
     <Box 
       width={{ xs: '100%', sm: '80%', md: '60%' }}
       sx={{
         display: 'flex',
         flexDirection: 'column',
+        color: "#EDEDED"
       }}
     >
       {/* Balance Information */}
@@ -148,4 +149,4 @@ const CpuSaleForm_Deposit: React.FC = () => {
   );
 };
 
-export default CpuSaleForm_Deposit;
+export default CpuSaleFormDeposit;

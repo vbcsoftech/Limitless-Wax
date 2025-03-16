@@ -16,10 +16,6 @@ interface StatsBoxProps {
   value: string | number;
 }
 
-interface ActionButtonProps {
-  title: string;
-}
-
 interface NavigationButtonProps {
   text: string;
 }
@@ -35,7 +31,7 @@ const StyledBox = ({ children, width = '100%', sx, ...props }: StyledBoxProps) =
     sx={{
       boxShadow: "10px 10px 5px #00000026",
       borderRadius: { xs: 3, md: 5 },
-      p: { xs: 2, sm: 3 },
+      p: { xs: 1, sm: 2 },
       width: { xs: '100%', md: width },
       ...sx
     }}

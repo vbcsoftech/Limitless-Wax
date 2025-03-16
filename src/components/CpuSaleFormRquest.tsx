@@ -1,14 +1,15 @@
 import React from 'react';
 import { Box, Typography, Button, TextField } from '@mui/material';
 
-const CpuSaleForm_Rquest: React.FC = () => {
+const CpuSaleFormRquest: React.FC = () => {
   return (
     <Box 
       sx={{
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' },
-        gap: { xs: 4, md: 6 },
-        width: '100%'
+        gap: { xs: 2, md: 2 },
+        width: '100%',
+        color: "#EDEDED"
       }}
     >
       {/* Form Section */}
@@ -17,7 +18,6 @@ const CpuSaleForm_Rquest: React.FC = () => {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          gap: { xs: 2, sm: 3 }
         }}
       >
         {/* Amount to send */}
@@ -166,17 +166,17 @@ const CpuSaleForm_Rquest: React.FC = () => {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          gap: { xs: 1, sm: 2 }
+          gap: { xs: 1, sm: 1.5 }
         }}
       >
         <Typography 
           variant="h6"
-          sx={{ fontSize: { xs: '1.1rem', sm: '1.25rem' } }}
+          sx={{ fontSize: { xs: '1.1rem', sm: '1.25rem' }, mb:2, fontWeight: "bold", color: "#EDEDED" }}
         >
           ROI
         </Typography>
         {['Daily', 'Weekly', 'Monthly'].map((period) => (
-          <Box key={period} sx={{ mt: { xs: 1, sm: 2 } }}>
+          <Box key={period}>
             <Typography 
               variant="body2"
               sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}
@@ -197,4 +197,4 @@ const CpuSaleForm_Rquest: React.FC = () => {
   );
 };
 
-export default CpuSaleForm_Rquest;
+export default CpuSaleFormRquest;

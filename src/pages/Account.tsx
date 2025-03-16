@@ -55,7 +55,7 @@ const Account: React.FC = () => {
             bgcolor="#391E24" 
             borderRadius="25px" 
             px={{ xs: 1.5, sm: 2 }} 
-            py={1} 
+            py={2} 
             boxShadow="5px 5px 5px #00000026"
             sx={{
               width: { xs: '100%', sm: 'auto' }
@@ -69,7 +69,7 @@ const Account: React.FC = () => {
             bgcolor="#391E24" 
             borderRadius="25px" 
             px={{ xs: 1.5, sm: 2 }} 
-            py={1} 
+            py={2} 
             boxShadow="5px 5px 5px #00000026"
             sx={{
               width: { xs: '100%', sm: 'auto' }

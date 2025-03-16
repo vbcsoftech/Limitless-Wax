@@ -1,34 +1,17 @@
 import React from 'react';
-import { Box, Typography, Button, Grid, useMediaQuery, AppBarProps, Theme, SxProps } from '@mui/material';
+import { Box, Typography, Link, Button, useMediaQuery, Theme, SxProps } from '@mui/material';
 
 import CallToAction from '../components/CallToAction';
 import FAQSection from '../components/FAQSection';
-
-type CustomAppBarProps = AppBarProps & {
-  customBgColor?: string;
-  customShadow?: string;
-  customPadding?: number;
-};
 
 interface DashboardProps {
   className?: string;
   sx?: SxProps<Theme>;
 }
 
-const defaultAppBarStyles: SxProps<Theme> = {
-  bgcolor: 'transparent',
-  boxShadow: 'none',
-  py: 2,
-};
 
 const Dashboard: React.FC<DashboardProps> = ({ className, sx }) => {
   const isSmallScreen: boolean = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
-
-  const appBarProps: CustomAppBarProps = {
-    position: "static",
-    component: "nav",
-    elevation: 0,
-  };
 
   return (
     <Box 
@@ -51,7 +34,7 @@ const Dashboard: React.FC<DashboardProps> = ({ className, sx }) => {
     >
       <Box textAlign="center" sx={{ py: 4, ...sx }}>
         <Box>
-          <Typography variant={isSmallScreen ? "h5" : "h3"} sx={{color: "white"}} gutterBottom>
+          <Typography variant={isSmallScreen ? "h5" : "h3"} sx={{fontWeight: "bold", color: "white"}} gutterBottom>
             A new CPU renting system on the WAX blockchain
           </Typography>
           <Typography variant="h6" paragraph>
@@ -119,10 +102,22 @@ const Dashboard: React.FC<DashboardProps> = ({ className, sx }) => {
             }}
           />
         </Box>
+        <Box width={1} display="flex" p={2}>
+          <Typography variant='body1' sx={{fontWeight: 200, color: "#ffffff", ml: 4}}>Public code:&nbsp; </Typography>
+          <Link
+            href="https://github.com/cpu4youu/cpu4youu.github.io" 
+            sx={{fontFamily: "Roboto", 
+              color: "#ffffff", 
+              textDecoration: "underline", 
+              cursor: "pointer"}}
+          >
+            https://github.com/cpu4youu/cpu4youu.github.io
+          </Link>
+        </Box>
 
         <Box mt={4}>
           <Typography variant={isSmallScreen ? "h5" : "h4"} sx={{color: "white"}} gutterBottom>
-            Users can interact with the smart contract in a number of ways
+            Users can interact with the smart contract in a <br />number of ways
           </Typography>
           <Typography variant="h6" paragraph>
             The system will be open for 1 week before allowing users to deposit their own wax to earn. If users find bugs there is a bug bounty program on discord.
@@ -146,11 +141,10 @@ const Dashboard: React.FC<DashboardProps> = ({ className, sx }) => {
             flexDirection: "column",
             justifyContent: "center",
             bgcolor: "#331E22",
-            minHeight: 250,
             border: "1px solid",
             borderColor: "inherit",
             borderRadius: 6,
-            p: 5
+            p: 3
           }}>
             <Typography variant={isSmallScreen ? "subtitle1" : "h5"} sx={{color: "white", mb: 2}}>
               Request CPU for Self
@@ -172,11 +166,10 @@ const Dashboard: React.FC<DashboardProps> = ({ className, sx }) => {
             flexDirection: "column",
             justifyContent: "center",
             bgcolor: "#331E22",
-            minHeight: 250,
             border: "1px solid",
             borderColor: "inherit",
             borderRadius: 6,
-            p: 5
+            p: 3
           }}>
             <Typography variant={isSmallScreen ? "subtitle1" : "h5"} sx={{color: "white", mb: 2}}>
               Request Free CPU
@@ -197,11 +190,10 @@ const Dashboard: React.FC<DashboardProps> = ({ className, sx }) => {
             flexDirection: "column",
             justifyContent: "center",
             bgcolor: "#331E22",
-            minHeight: 250,
             border: "1px solid",
             borderColor: "inherit",
             borderRadius: 6,
-            p: 5
+            p: 3
           }}>
             <Typography variant={isSmallScreen ? "subtitle1" : "h5"} sx={{color: "white", mb: 2}}>
               Deposit to Earn
@@ -221,11 +213,10 @@ const Dashboard: React.FC<DashboardProps> = ({ className, sx }) => {
             flexDirection: "column",
             justifyContent: "center",
             bgcolor: "#4A1E2A",
-            minHeight: 250,
             border: "1px solid",
             borderColor: "inherit",
             borderRadius: 6,
-            p: 5
+            p: 3
           }}>
             <Typography variant={isSmallScreen ? "subtitle1" : "h5"} sx={{color: "white", mb: 2}}>
               Request CPU for Others
@@ -247,11 +238,10 @@ const Dashboard: React.FC<DashboardProps> = ({ className, sx }) => {
             flexDirection: "column",
             justifyContent: "center",
             bgcolor: "#4A1E2A",
-            minHeight: 250,
             border: "1px solid",
             borderColor: "inherit",
             borderRadius: 6,
-            p: 5
+            p: 3
           }}>
             <Typography variant={isSmallScreen ? "subtitle1" : "h5"} sx={{color: "white", mb: 2}}>
               Update Collected Fees
@@ -274,11 +264,10 @@ const Dashboard: React.FC<DashboardProps> = ({ className, sx }) => {
             flexDirection: "column",
             justifyContent: "center",
             bgcolor: "#4A1E2A",
-            minHeight: 250,
             border: "1px solid",
             borderColor: "inherit",
             borderRadius: 6,
-            p: 5
+            p: 3
           }}>
             <Typography variant={isSmallScreen ? "subtitle1" : "h5"} sx={{color: "white", mb: 2}}>
               Withdraw Deposited Wax

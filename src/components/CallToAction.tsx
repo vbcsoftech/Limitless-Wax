@@ -19,7 +19,8 @@ const CallToAction = () => (
       sx={{
         fontSize: { xs: '1.25rem', sm: '1.5rem', md: '1.75rem' },
         textAlign: { xs: 'center', sm: 'left' },
-        maxWidth: { xs: '100%', sm: '60%' }
+        maxWidth: { xs: '100%', sm: '60%' },
+        color: "#ffffff"
       }}
     >
       Stay up to date with Limitless WAX
@@ -31,7 +32,6 @@ const CallToAction = () => (
         background: "#882140",
         borderRadius: "0",
         color: "white",
-        border: "1px solid white",
         py: { xs: 1, sm: 1.5 },
         px: { xs: 3, sm: 4 },
         width: { xs: '100%', sm: 'auto' },

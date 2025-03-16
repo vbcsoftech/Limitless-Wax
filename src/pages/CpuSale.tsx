@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Button, List, TextField } from '@mui/material';
+import { Box} from '@mui/material';
 
 import TotalWax from '../components/TotalWax';
 import CpuSaleForm from '../components/CpuSaleForm'

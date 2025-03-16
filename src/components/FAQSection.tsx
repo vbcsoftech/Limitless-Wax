@@ -74,7 +74,16 @@ const FAQSection = () => {
             aria-controls={`panel${item.id}a-content`}
             id={`panel${item.id}a-header`}
           >
-            <Typography variant='h6'>{item.question}</Typography>
+            <Typography 
+              variant='h5' 
+              sx={{
+                fontSize: { xs: '1.125rem', sm: '1.25rem', md: '1.5rem' },
+                lineHeight: { xs: 1.4, sm: 1.5 },
+                fontWeight: 500
+              }}
+            >
+              {item.question}
+            </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography textAlign="left">{item.answer}</Typography>

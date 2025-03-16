@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 
-const Avatar_Text = () => {
+const AvatarText = () => {
   return (
     <Box
       sx={{
@@ -51,7 +51,7 @@ const Avatar_Text = () => {
             fontWeight: 300,
             fontSize: { xs: '0.875rem', sm: '1rem', md: '1.25rem' },
             lineHeight: 1.5,
-            maxWidth: { xs: '280px', sm: '400px', md: 'none' }
+            maxWidth: { xs: '280px', sm: '400px', md: 'none' },
           }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue etiam auctor massa etiam.
@@ -105,4 +105,4 @@ const Avatar_Text = () => {
   );
 };
 
-export default Avatar_Text;
+export default AvatarText;

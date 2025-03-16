@@ -1,13 +1,14 @@
 import React from 'react';
 import { Box, Typography, Button, TextField } from '@mui/material';
 
-const CpuSaleForm_Stake: React.FC = () => {
+const CpuSaleFormStake: React.FC = () => {
   return (
     <Box 
       sx={{
         width: { xs: '100%', sm: '60%' },
         display: 'flex',
         flexDirection: 'column',
+        color: "#EDEDED",
         gap: 2
       }}
     >
@@ -147,4 +148,4 @@ const CpuSaleForm_Stake: React.FC = () => {
   );
 };
 
-export default CpuSaleForm_Stake;
+export default CpuSaleFormStake;
